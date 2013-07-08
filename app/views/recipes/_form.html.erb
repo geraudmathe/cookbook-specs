@@ -19,6 +19,18 @@
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
+
+  <h2>Ingredients</h2>
+  <ul>
+    <% Ingredient.all.each do |ingredient| %>
+    <li>
+     <%= label_tag ingredient.name %>
+      <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, @recipe.ingredient_ids.include?(ingredient.id) %></li>
+    </li>
+    <% end %>
+  </ul>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
