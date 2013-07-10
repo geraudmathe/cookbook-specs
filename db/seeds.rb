@@ -6,7 +6,9 @@ egg = Ingredient.create! name: 'Egg'
 water = Ingredient.create! name: 'Water'
 butter = Ingredient.create! name: 'Butter'
 
-r = Recipe.create! name: 'Scrambled Eggs', ingredient_ids: [egg.id, salt.id, milk.id, butter.id]
-r = Recipe.create! name: 'Omlette', ingredient_ids: [egg.id, milk.id, salt.id]
+r = Recipe.create! name: 'Scrambled Eggs'
+r.ingredients = [egg, salt, milk, butter]
+r = Recipe.create! name: 'Omlette'
+r.ingredients = [egg, milk, salt]
 
 
