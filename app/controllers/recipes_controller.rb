@@ -40,7 +40,6 @@ class RecipesController < ApplicationController
   # POST /recipes
   # POST /recipes.json
   def create
-    params[:recipe][:ingredient_ids] ||= [] if params[:recipe]
     @recipe = Recipe.new(params[:recipe])
 
     respond_to do |format|
@@ -57,7 +56,6 @@ class RecipesController < ApplicationController
   # PUT /recipes/1
   # PUT /recipes/1.json
   def update
-    params[:recipe][:ingredient_ids] ||= [] if params[:recipe]
     @recipe = Recipe.find(params[:id])
 
     respond_to do |format|

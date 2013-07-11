@@ -12,8 +12,8 @@
 
 <h2>Ingredients</h2>
 <ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
+  <% @recipe.ingredients_recipes.each do |ingredients_recipe| %>
+    <li><%= ingredients_recipe.quantity %> of <%= ingredients_recipe.ingredient.name %></li>
   <% end %>
 </ul>
 

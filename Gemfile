@@ -1,4 +1,3 @@
-ruby '1.9.3'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
@@ -7,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'nested_form'
 
 group :development, :test do
   gem 'pry-rails'
