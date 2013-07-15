@@ -6,4 +6,6 @@ class Recipe < ActiveRecord::Base
 
   accepts_nested_attributes_for :ingredients_recipes, allow_destroy: true
 
+  validates :name, presence: true, uniqueness: true
+  validates :image, presence: true
 end

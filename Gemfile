@@ -19,6 +19,13 @@ group :development, :test do
   gem 'meta_request'
 end
 
+group :test do
+  gem "rspec-rails"
+  gem 'shoulda'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 
 
 
